@@ -1,0 +1,15 @@
+const botonesMostrar = document.querySelectorAll('.mostrar-info');
+
+botonesMostrar.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const infoAdicional = boton.nextElementSibling;
+
+        if (infoAdicional.style.display === 'none' || infoAdicional.style.display === '') {
+            infoAdicional.style.display = 'block'; 
+            boton.textContent = 'Ocultar'; 
+        } else {
+            infoAdicional.style.display = 'none'; 
+            boton.textContent = 'Mostrar Más'; 
+        }
+    });
+});
